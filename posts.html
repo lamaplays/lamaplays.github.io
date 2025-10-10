@@ -1,0 +1,36 @@
+---
+permalink: /posts/
+---
+
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Posts · {{ site.title | default: "mysite" }}</title>
+  <link rel="stylesheet" href="{{ '/assets/landing.css' | relative_url }}">
+</head>
+<body>
+  <main class="container" style="padding-block:40px">
+        <p class="muted" style="margin:0 0 10px">
+      <a href="{{ '/home/' | relative_url }}">&larr; home</a>
+    </p>
+    <h1 class="posts-title" style="text-align:center">All posts</h1>
+    <ul class="posts-grid">
+      {% for post in site.posts %}
+      <li class="post-card">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        {% assign date_format = "%b %-d, %Y" %}
+        <div class="post-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time>
+          {% if post.tags and post.tags.size > 0 %} ·
+            {% for t in post.tags %}<span class="tag">{{ t }}</span>{% unless forloop.last %} {% endunless %}{% endfor %}
+          {% endif %}
+        </div>
+        {% if site.show_excerpts %}{{ post.excerpt }}{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </main>
+</body>
+</html>
