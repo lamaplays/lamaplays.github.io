@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="{{ page.lang | default: site.default_lang }}" dir="{% if page.lang == 'ar' %}rtl{% else %}ltr{% endif %}" 
+   data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -12,10 +13,18 @@
 
   <!-- top-right actions -->
   <div class="container top-actions-bar">
-    <nav class="lang">
-      <a href="?lang=en" aria-label="English">EN</a><span>·</span>
-      <a href="?lang=ar" aria-label="Arabic">AR</a>
-    </nav>
+      <nav class="lang">
+          {% for lang in site.languages %}
+            {% if lang != site.active_lang %}
+              {% if lang == site.default_lang and site.include_default_lang != true %}
+                <a href="{{ site.baseurl_root }}{{ target }}">{{ lang | upcase }}</a>
+              {% else %}
+                <a href="{{ site.baseurl_root }}/{{ lang }}{{ target }}">{{ lang | upcase }}</a>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+      </nav>
+
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
       <svg class="sun" viewBox="0 0 24 24"><path d="M12 4V2M12 22v-2M4 12H2m20 0h-2M5 5l-1.4-1.4M20.4 19.4 19 18M5 19l-1.4 1.4M20.4 4.6 19 6"/><circle cx="12" cy="12" r="4"/></svg>
       <svg class="moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -27,12 +36,7 @@
   </main>
 
   <script>
-    (function(){
-      const q = new URLSearchParams(location.search);
-      const lang = q.get('lang') || 'en';
-      document.documentElement.lang = lang;
-      if (lang === 'ar') document.documentElement.setAttribute('dir','rtl');
-    })();
+
 
     (function(){
       const root = document.documentElement;

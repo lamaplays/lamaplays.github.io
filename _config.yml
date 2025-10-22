@@ -32,6 +32,22 @@ github_username: lamaplays
 #theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-polyglot
+  
+
+languages: ["en","ar","fr"]
+default_lang: "en"
+exclude_from_localization:
+  - assets/
+  - css/
+  - js/
+  - fonts/
+  - favicon.ico
+  - robots.txt
+  - sitemap.xml
+parallel_localization: false
+url: https://lamaplays.github.io/
+include_default_lang: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
