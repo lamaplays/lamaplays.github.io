@@ -1,0 +1,22 @@
+
+ 
+    <div class="container top-actions-bar">
+    <nav class="lang">
+                  {% for lang in site.languages %}
+                {% if lang == site.active_lang %}
+            {{ lang }}
+                {% else %}
+                    {% if lang == site.default_lang %}
+            <a href=" {{ page.url }}">{{ lang }}</a>
+                    {% else %}
+            <a href="/{{ lang }}{{ page.url }}">{{ lang }}</a>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <svg class="sun" viewBox="0 0 24 24"><path d="M12 4V2M12 22v-2M4 12H2m20 0h-2M5 5l-1.4-1.4M20.4 19.4 19 18M5 19l-1.4 1.4M20.4 4.6 19 6"/><circle cx="12" cy="12" r="4"/></svg>
+      <svg class="moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+
