@@ -32,39 +32,25 @@ github_username: lamaplays
 #theme: minima
 plugins:
   - jekyll-feed
-<<<<<<< HEAD
+
   - jekyll-polyglot
   
-
-languages: ["en","ar","fr"]
-=======
-<<<<<<< Updated upstream
-=======
-  - jekyll-polyglot
   
 
 languages: ["en","ar"]
->>>>>>> master
 default_lang: "en"
 exclude_from_localization:
   - assets/
   - css/
   - js/
-<<<<<<< HEAD
-  - fonts/
-  - favicon.ico
-  - robots.txt
-  - sitemap.xml
+
 parallel_localization: false
 url: https://lamaplays.github.io/
-include_default_lang: true
-=======
 
 parallel_localization: false
 
 include_default_lang: false
->>>>>>> Stashed changes
->>>>>>> master
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
