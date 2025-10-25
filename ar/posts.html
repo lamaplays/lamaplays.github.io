@@ -1,16 +1,16 @@
 ---
 layout: default
 title: Posts
-lang: en
-permalink: /posts/
+lang : ar
+permalink: /كل المذكرات/
 page_id: postspage
 ---
 
   <main class="container" style="padding-block:40px">
         <p class="muted" style="margin:0 0 10px">
-      <a href="{{ '/' | relative_url }}">&larr; home</a>
+      <a href="{{ '/' | relative_url }}">&larr; الرئيسية</a>
     </p>
-    <h1 class="posts-title" style="text-align:center">All posts</h1>
+    <h1 class="posts-title" style="text-align:center">مذكراتي</h1>
     <ul class="posts-grid">
       {% for post in site.posts %}
       <li class="post-card">
@@ -27,5 +27,3 @@ page_id: postspage
       {% endfor %}
     </ul>
   </main>
-
-

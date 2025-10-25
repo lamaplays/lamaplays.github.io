@@ -59,3 +59,21 @@ a{ color:var(--accent); text-decoration:none; }
 /* RTL when visiting ?lang=ar */
 html[dir="rtl"]{ direction:rtl; text-align:right; }
 html[dir="rtl"] .top-actions-bar{ justify-content:flex-start; }
+
+:lang(ar) {
+  font-family: "Noto Naskh Arabic", "Amiri", system-ui, serif;
+  line-height: 1.9;
+  word-spacing: 0.02em;
+  hyphens: auto;
+}
+
+:lang(ar) .btn { letter-spacing: 0; }
+:lang(ar) .quote { font-style: normal; }
+
+[dir="rtl"] .icon--chev { transform: scaleX(-1); }
+
+/* أمثلة تحويل إلى خصائص منطقية عند الحاجة:
+.title { text-align: start; }
+.card  { margin-inline-start: 12px; }
+*/
+
