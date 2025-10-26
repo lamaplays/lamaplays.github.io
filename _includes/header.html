@@ -13,7 +13,7 @@
             {% if lang != site.default_lang %}/{{ lang }}{% endif %}
             {% if p != '/' %}{{ p }}{% endif %}
           {% endcapture %}
-          <a href=" {{ href | replace: '//', '/' | replace: ':/', '://' }}">{{ lang }}</a>
+          <a href="{{ href | replace: '//', '/' | replace: ':/', '://' }}">{{ lang }}</a>
         {% endif %}
       {% endfor %}
     {% else %}

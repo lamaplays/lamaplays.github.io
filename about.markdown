@@ -2,7 +2,7 @@
 layout: default
 title: About
 lang: "en"
-permalink: /about/
+permalink: "/about/"
 page_id: about
 ---
 
