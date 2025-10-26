@@ -45,9 +45,8 @@ exclude_from_localization:
   - js/
 
 parallel_localization: false
-url: https://lamaplays.github.io/
 
-parallel_localization: false
+
 
 include_default_lang: false
 
