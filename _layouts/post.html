@@ -1,9 +1,7 @@
-
-
-
-
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="{{ site.active_lang | default: 'en' }}"
+      dir="{% if page.lang == 'ar' %}rtl{% else %}ltr{% endif %}"
+      data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,14 +10,32 @@
 </head>
 <body>
   {% include header.html %}
+
+  {% if site.active_lang == 'ar' %}
+    {% assign posts_url = '/ar/كل-المذكرات/' %}
+    {% assign posts_label = 'كل المذكرات' %}
+  {% else %}
+    {% assign posts_url = '/posts/' %}
+    {% assign posts_label = 'All posts' %}
+  {% endif %}
+
+  {% if page.lang == 'ar' %}
+    {% assign date_format = "%-d %b %Y" %}
+  {% else %}
+    {% assign date_format = "%b %-d, %Y" %}
+  {% endif %}
+
   <main class="container prose" style="padding-block:40px">
     <p class="muted" style="margin:0 0 10px">
-      <a href="{{ '/posts/' | relative_url }}">&larr; All posts</a>
+      <a href="{{ posts_url | relative_url }}">
+        {% if page.lang == 'ar' %}&rarr;{% else %}&larr;{% endif %} {{ posts_label }}
+      </a>
     </p>
 
     <h1 style="margin:0 0 .2em">{{ page.title }}</h1>
-    {% assign date_format = "%b %-d, %Y" %}
-    <p class="post-meta">{{ page.date | date: date_format }}
+
+    <p class="post-meta">
+      {{ page.date | date: date_format }}
       {% if page.tags and page.tags.size > 0 %} ·
         {% for t in page.tags %}
           <span class="tag">{{ t }}</span>{% unless forloop.last %} {% endunless %}
@@ -33,13 +49,17 @@
 
     <hr style="margin:28px 0; border:0; border-top:1px solid var(--border)">
 
-    <nav class="post-meta">
+    <nav class="post-meta" style="display:flex; gap:12px;">
       {% if page.previous %}
-        <a href="{{ page.previous.url | relative_url }}">&larr; {{ page.previous.title }}</a>
+        <a href="{{ page.previous.url | relative_url }}">
+          {% if page.lang == 'ar' %} {{ page.previous.title }} &rarr; {% else %} &larr; {{ page.previous.title }} {% endif %}
+        </a>
       {% endif %}
+      <span style="flex:1"></span>
       {% if page.next %}
-        <span style="flex:1"></span>
-        <a href="{{ page.next.url | relative_url }}">{{ page.next.title }} &rarr;</a>
+        <a href="{{ page.next.url | relative_url }}">
+          {% if page.lang == 'ar' %} &larr; {{ page.next.title }} {% else %} {{ page.next.title }} &rarr; {% endif %}
+        </a>
       {% endif %}
     </nav>
   </main>
