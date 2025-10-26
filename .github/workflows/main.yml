@@ -1,4 +1,4 @@
-name: Deploy Jekyll (polyglot) to GitHub Pages
+name: Deploy Jekyll to GitHub Pages
 
 on:
   push:
@@ -27,13 +27,11 @@ jobs:
           ruby-version: "3.3"
           bundler-cache: true
 
-      - name: Install dependencies
-        run: bundle install --jobs 4 --retry 3
+      - name: Install deps
+        run: bundle install --path vendor/bundle
 
-      - name: Build site (production)
-        env:
-          JEKYLL_ENV: production
-        run: bundle exec jekyll build --trace --profile -d _site
+      - name: Build site
+        run: bundle exec jekyll build -d _site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -47,6 +45,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
+      - id: deployment
         uses: actions/deploy-pages@v4
+	
