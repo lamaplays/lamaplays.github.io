@@ -2,33 +2,34 @@
  
     <div class="container top-actions-bar">
     <nav class="lang">
-    {% if page.permalink_lang %}
-      {% for lang in site.languages %}
-        {% if lang == site.active_lang %}
-         {{ lang }}
-        {% else %}
-          {% assign p = page.permalink_lang[lang] | default: '/' %}
-          {% capture href %}
-            {{ site.baseurl_root }}
-            {% if lang != site.default_lang %}/{{ lang }}{% endif %}
-            {% if p != '/' %}{{ p }}{% endif %}
-          {% endcapture %}
-          <a href="{{ href | replace: '//', '/' | replace: ':/', '://' }}">{{ lang }}</a>
-        {% endif %}
-      {% endfor %}
-    {% else %}
-      {% for lang in site.languages %}
-        {% if lang == site.active_lang %}
-          {{ lang }}
-        {% else %}
-          {% if lang == site.default_lang and site.include_default_lang != true %}
-            <a href=" {{ site.baseurl_root }}/">{{ lang }}</a>
-          {% else %}
-            <a href=" {{ site.baseurl_root }}/{{ lang }}/">{{ lang }}</a>
-          {% endif %}
-        {% endif %}
-      {% endfor %}
-    {% endif %}
+{% if page.permalink_lang -%}
+  {% for lang in site.languages -%}
+    {% if lang == site.active_lang -%}
+      {{ lang }}
+    {% else -%}
+      {% assign p = page.permalink_lang[lang] | default: '/' | strip -%}
+      {% capture href -%}
+        {{ site.baseurl_root }}{% if lang != site.default_lang %}/{{ lang }}{% endif %}{% if p != '/' %}{{ p }}{% endif %}
+      {%- endcapture %}
+      <a href=" {{ href | strip | replace: '//', '/' | replace: ':/', '://' }}">{{ lang }}</a>
+    {%- endif %}
+  {%- endfor %}
+{%- else -%}
+  {% for lang in site.languages -%}
+    {% if lang == site.active_lang -%}
+      {{ lang }}
+    {% else -%}
+      {% if lang == site.default_lang and site.include_default_lang != true -%}
+        <a href=" {{ site.baseurl_root }}/">{{ lang }}</a>
+      {% else -%}
+        <a href=" {{ site.baseurl_root }}/{{ lang }}/">{{ lang }}</a>
+      {%- endif %}
+    {%- endif %}
+  {%- endfor %}
+{%- endif %}
+
+
+
    
     </nav>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
