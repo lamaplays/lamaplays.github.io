@@ -5,5 +5,5 @@ date:
 lang: en
 tags: [notes]
 ---
-
-hello pls work
+hello from Obsidian git 
+pushed from Obsidian
