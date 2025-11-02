@@ -64,13 +64,14 @@ html[dir="rtl"] .top-actions-bar{ justify-content:flex-start; }
 
 :lang(ar) {
   font-family: "Noto Naskh Arabic", "Amiri", system-ui, serif;
-  line-height: 1.9;
+  /* line-height: 1.9; */
   word-spacing: 0.02em;
   hyphens: auto;
+  
 }
 
 :lang(ar) .btn { letter-spacing: 0; }
-:lang(ar) .quote { font-style: normal; }
+:lang(ar) .quote { font-style:italic; }
 
 [dir="rtl"] .icon--chev { transform: scaleX(-1); }
 
