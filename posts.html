@@ -12,10 +12,11 @@ page_id: postspage
     </p>
     <h1 class="posts-title" style="text-align:center">All posts</h1>
     <ul class="posts-grid">
+      {% if site.posts.size == 0 %}
+      <p class="quote" style="text-align:center">No posts ... yet</p>
+      {% else %}
       {% for post in site.posts %}
-      {% if site.posts.size = 0 %}
-        <p>No posts ... yet.</p>
-      {% endif %}
+
       <li class="post-card">
         <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
         {% assign date_format = "%b %-d, %Y" %}
@@ -28,6 +29,7 @@ page_id: postspage
         {% if site.show_excerpts %}{{ post.excerpt }}{% endif %}
       </li>
       {% endfor %}
+      {% endif %}
     </ul>
   </main>
 

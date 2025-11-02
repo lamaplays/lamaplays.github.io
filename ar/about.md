@@ -7,4 +7,4 @@ page_id: about
 ---
 <a href="{{ '/' | relative_url }}">&larr; الرئيسية</a>
 
-# ضبط؟
+# عنِّي
