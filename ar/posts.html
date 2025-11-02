@@ -13,6 +13,9 @@ page_id: postspage
     <h1 class="posts-title" style="text-align:center">مذكراتي</h1>
     <ul class="posts-grid">
       {% for post in site.posts %}
+      {% if site.posts.size = 0 %}
+      <p>لا توجد مذكرات ... حتى الآن.</p>
+      {% endif %}
       <li class="post-card">
         <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
         {% assign date_format = "%b %-d, %Y" %}
