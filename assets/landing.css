@@ -56,14 +56,51 @@ a{ color:var(--accent); text-decoration:none; }
 .post-meta{ color:var(--muted); font-size:.92rem; margin:.2rem 0 .4rem; }
 
 /* mobile */
-@media (max-width:560px){ .cta-row{ grid-template-columns:1fr; } .title{ font-size:clamp(1.4rem,5vw,2rem); } }
+@media (max-width:560px){
+  
+  :root{ --pad: clamp(12px, 4vw, 16px); }
 
+
+  .container{
+    max-width: 100%;
+    margin-inline: auto;
+    padding-inline: var(--pad);
+  }
+  .title,
+  .cta-row,
+  .social{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cta-row{ grid-template-columns: 1fr; }
+  .title{ font-size: clamp(1.4rem, 5vw, 2rem); }
+
+  .hero img,
+  .avatar,
+  #themeGif{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-inline: auto;
+  }
+
+  /* iPhone notch/safe-area padding */
+  @supports (padding: max(0px)) {
+    .container{
+      padding-left:  max(var(--pad), env(safe-area-inset-left));
+      padding-right: max(var(--pad), env(safe-area-inset-right));
+    }
+  }
+}
+  
 /* RTL when visiting ?lang=ar */
 html[dir="rtl"]{ direction:rtl; text-align:right; }
 html[dir="rtl"] .top-actions-bar{ justify-content:flex-start; }
 
 :lang(ar) {
-  font-family: "Noto Naskh Arabic", "Amiri", system-ui, serif;
+  font-family: "IBM Plex Sans Arabic",system-ui, serif;
   /* line-height: 1.9; */
   word-spacing: 0.02em;
   hyphens: auto;
@@ -74,6 +111,10 @@ html[dir="rtl"] .top-actions-bar{ justify-content:flex-start; }
 :lang(ar) .quote { font-style:italic; }
 
 [dir="rtl"] .icon--chev { transform: scaleX(-1); }
+
+
+
+
 
 /* أمثلة تحويل إلى خصائص منطقية عند الحاجة:
 .title { text-align: start; }
