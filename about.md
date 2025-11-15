@@ -20,11 +20,14 @@ i did a BSc in computer science. I'm a curious soul and I aspire to be come a re
 here are my projects:
 - [medPic- medicine recognition + RAG (my senior year project)](https://github.com/lamaplays/medPic)
 - [a simple discord bot](https://github.com/lamaplays/K-2SO) 
-- [developed a bunch of game mvps](insert link to screenshots)
+- [developed a bunch of game mvps](https://github.com/lamaplays/lamaplays.github.io/images)
 
 what I'm doing next: 
 - local AI agent
 - dark pink theme chrome extension 
 - - - 
+
+
+
 
 fun fact: this page was written and pushed to GitHub pages through obsidian!
