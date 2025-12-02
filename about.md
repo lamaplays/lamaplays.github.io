@@ -25,7 +25,7 @@ here are my projects:
 what I'm doing next: 
 - local AI agent
 - dark pink theme chrome extension 
-- - - 
+
 
 
 
