@@ -11,7 +11,6 @@ page_id: about
 
 # About Me
 
-
 Hi, welcome here
 
 I'm Lama, I like to build software and AI pipelines. I'm a huge advocate for life-long learning so I'm constantly seeking opportunities to develop my skills and learn.
@@ -21,13 +20,14 @@ here are my projects:
 - [medPic- medicine recognition + RAG (my senior year project)](https://github.com/lamaplays/medPic)
 - [a simple discord bot](https://github.com/lamaplays/K-2SO) 
 - [developed a bunch of game mvps](https://github.com/lamaplays/lamaplays.github.io/images)
+- [local AI agent](https://github.com/lamaplays/Sira)
 
 what I'm doing next: 
-- local AI agent
+- desktop application
 - dark pink theme chrome extension 
 
 
 
 
 
-fun fact: this page was written and pushed to GitHub pages through obsidian!
+fun fact: this page was written and pushed to GitHub pages through Obsidian!
