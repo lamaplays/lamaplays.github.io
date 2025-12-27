@@ -22,7 +22,7 @@ I also LOVE to read, send me the title of your favorite books and I will share m
 here are my projects:
 - [medPic- medicine recognition + RAG (my senior year project)](https://github.com/lamaplays/medPic)
 - [a simple discord bot](https://github.com/lamaplays/K-2SO) 
-- [developed a bunch of game mvps](https://github.com/lamaplays/lamaplays.github.io/images)
+- [developed a bunch of games MVP as part of a game gam](https://github.com/lamaplays/lamaplays.github.io/images)
 - [local AI agent](https://github.com/lamaplays/Sira)
 
 what I'm doing next: 
