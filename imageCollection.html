@@ -6,10 +6,12 @@ permalink: /imgCollection/
 <body>
     <h1> Gallery</h1>
 
-        <img src="images/a.png" alt="Cat gif" />
-     <img src="images/b.png" alt="Smoke frame 1" />  <!-- TODO: Adjsut links -->
-    <video width="400" controls>
-        <source src="c.mp4" type="video/mp4">
+        <img src="{{ 'assets/images/a.png' | relative_url }}" height="400" width="800" alt="screenshot1" />
+        <br>
+     <img src="{{ 'assets/images/b.png' | relative_url }}" height="400" width="800" alt="screenshot2" />
+     <br> 
+    <video height="400" width="800" controls>
+        <source src= "{{ 'assets/images/c.mp4' | relative_url }}" type="video/mp4">
     </video>
 
 </body>
