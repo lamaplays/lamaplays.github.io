@@ -1,16 +1,12 @@
-<!doctype html>
-<html lang="{{ site.active_lang | default: 'en' }}"
-      dir="{% if page.lang == 'ar' %}rtl{% else %}ltr{% endif %}"
-      data-theme="dark">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{ page.title }} · {{ site.title | default: "mysite" }}</title>
-  <link rel="stylesheet" href="{{ '/assets/landing.css' | relative_url }}">
-</head>
-<body>
-  {% include header.html %}
+---
+layout: default
+lang: en
+permalink: /posts/:title
+---
 
+
+<!doctype html>
+<body>
   {% if site.active_lang == 'ar' %}
     {% assign posts_url = '/ar/كل-المذكرات/' %}
     {% assign posts_label = 'كل المذكرات' %}
