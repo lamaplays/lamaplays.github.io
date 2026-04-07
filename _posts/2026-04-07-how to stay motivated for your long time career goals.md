@@ -6,7 +6,7 @@ title: how to stay motivated for your long time career goals
 
 lang: "en"
 
-date: 2026-04-07
+
 
 ---
 
