@@ -2,7 +2,7 @@
 
 layout: post
 
-title: how to stay motivated for your long time career goals
+title: how to stay motivated for your long term career goals
 
 lang: "en"
 
