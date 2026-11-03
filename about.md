@@ -13,10 +13,11 @@ page_id: about
 
 Hi, welcome here
 
-I'm Lama, I like to build software and AI pipelines.
+I'm Lama, I like to build software and games, sometimes AI pipelines.
 
 I'm a huge advocate for life-long learning so I'm constantly seeking opportunities to develop my skills and learn.
-i did a BSc in computer science. I'm a curious soul and I aspire to be come a researcher in my field.
+i did a BSc in computer science. And I'm a currently a MSc student learning about quantum information.
+I'm a curious soul and I aspire to be come a researcher in my field.
 I also LOVE to read, send me the title of your favorite books and I will share mine :) 
 
 here are my projects:
@@ -26,8 +27,9 @@ here are my projects:
 - [local AI agent](https://github.com/lamaplays/Sira)
 
 what I'm doing next: 
-- desktop application
-- dark pink theme chrome extension 
+- creating a pixel roguelite game.
+- desktop application for my loca AI agent.
+- dark pink theme chrome extension (postponed)
 
 
 
