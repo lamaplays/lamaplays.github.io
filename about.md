@@ -28,7 +28,7 @@ here are my projects:
 
 what I'm doing next: 
 - creating a pixel roguelite game.
-- desktop application for my loca AI agent.
+- desktop interface for Sira (my local AI agent).
 - dark pink theme chrome extension (postponed)
 
 
